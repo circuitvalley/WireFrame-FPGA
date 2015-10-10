@@ -1,0 +1,2 @@
+verilog work "timer.v"
+verilog work "nec_decoder.v"

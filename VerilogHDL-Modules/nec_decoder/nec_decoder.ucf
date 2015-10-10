@@ -1,0 +1,15 @@
+
+# PlanAhead Generated physical constraints 
+//NET "rst" LOC = P88;
+NET "clk" LOC = P89;
+NET "IR" LOC = P78;
+NET "dataready" LOC = P79;
+NET "repeat_code" LOC = P68;
+
+
+//	 address,
+//	 data,
+	 
+NET "IR" IOSTANDARD = LVCMOS33;
+NET "dataready" IOSTANDARD = LVCMOS33;
+NET "repeat_code" IOSTANDARD = LVCMOS33;
