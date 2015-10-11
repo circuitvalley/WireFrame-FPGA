@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Gaurav\Documents\FPGA\Xilinx ISE\Counter\counter_wireframe\counter_wireframe\counter.ncd
+OUTFILE=C:\Users\Gaurav\Documents\FPGA\Xilinx ISE\Counter\counter_wireframe\counter_wireframe\counter.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4vq100
+WORKINGDIR=C:\Users\Gaurav\Documents\FPGA\Xilinx ISE\Counter\counter_wireframe\counter_wireframe
+LICENSE=WebPack
+USER_INFO=210739446_0_0_571

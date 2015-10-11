@@ -1,0 +1,11 @@
+
+# PlanAhead Generated physical constraints 
+NET "rst" LOC = P88;
+NET "clk" LOC = P89;
+NET "count[24]" LOC = P78;
+NET "count[25]" LOC = P79;
+NET "count[23]" LOC = P68;
+
+NET "count[0]" IOSTANDARD = LVCMOS33;
+NET "count[19]" IOSTANDARD = LVCMOS33;
+NET "count[20]" IOSTANDARD = LVCMOS33;
