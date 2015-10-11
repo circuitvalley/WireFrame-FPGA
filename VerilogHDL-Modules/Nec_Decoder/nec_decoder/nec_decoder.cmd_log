@@ -1,0 +1,455 @@
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim nec_decoder.ngc nec_decoder_synthesis.v 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim nec_decoder.ngc nec_decoder_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim nec_decoder.ngc nec_decoder_synthesis.v 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim nec_decoder.ngc nec_decoder_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim nec_decoder.ngc nec_decoder_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nec_decoder.ucf -p xc3s250e-vq100-4 "nec_decoder.ngc" nec_decoder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o nec_decoder_map.ncd nec_decoder.ngd nec_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 nec_decoder_map.ncd nec_decoder.ncd nec_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml nec_decoder.twx nec_decoder.ncd -o nec_decoder.twr nec_decoder.pcf -ucf nec_decoder.ucf 
+bitgen -intstyle ise -f nec_decoder.ut nec_decoder.ncd 

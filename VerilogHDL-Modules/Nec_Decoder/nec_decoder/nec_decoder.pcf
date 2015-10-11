@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Mon Oct 12 03:27:24 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "IR" LOCATE = SITE "P30" LEVEL 1;
+COMP "dataready" LOCATE = SITE "P79" LEVEL 1;
+COMP "clk" LOCATE = SITE "P89" LEVEL 1;
+COMP "data<0>" LOCATE = SITE "P23" LEVEL 1;
+COMP "data<1>" LOCATE = SITE "P22" LEVEL 1;
+COMP "data<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "data<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "data<4>" LOCATE = SITE "P3" LEVEL 1;
+COMP "data<5>" LOCATE = SITE "P2" LEVEL 1;
+COMP "data<6>" LOCATE = SITE "P95" LEVEL 1;
+COMP "data<7>" LOCATE = SITE "P94" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

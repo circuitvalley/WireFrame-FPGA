@@ -1,0 +1,47 @@
+
+NET "clk" LOC = P89;
+
+NET "dataready" LOC = P79;
+NET "dataready" IOSTANDARD = LVCMOS33;
+
+
+NET "data[7]" LOC = P94;
+NET "data[6]" LOC = P95;
+NET "data[5]" LOC = P2;
+NET "data[4]" LOC = P3;
+NET "data[3]" LOC = P11;
+NET "data[2]" LOC = P12;
+NET "data[1]" LOC = P22;
+NET "data[0]" LOC = P23;
+
+NET "data[7]" IOSTANDARD = LVCMOS33;
+NET "data[6]" IOSTANDARD = LVCMOS33;
+NET "data[5]" IOSTANDARD = LVCMOS33;
+NET "data[4]" IOSTANDARD = LVCMOS33;
+NET "data[3]" IOSTANDARD = LVCMOS33;
+NET "data[2]" IOSTANDARD = LVCMOS33;
+NET "data[1]" IOSTANDARD = LVCMOS33;
+NET "data[0]" IOSTANDARD = LVCMOS33;
+
+NET "data[7]" DRIVE = 4;
+NET "data[6]" DRIVE = 4;
+NET "data[5]" DRIVE = 4;
+NET "data[4]" DRIVE = 4;
+NET "data[3]" DRIVE = 4;
+NET "data[2]" DRIVE = 4;
+NET "data[1]" DRIVE = 4;
+NET "data[0]" DRIVE = 4;
+
+NET "address[7]" IOSTANDARD = LVCMOS33;
+NET "address[6]" IOSTANDARD = LVCMOS33;
+NET "address[5]" IOSTANDARD = LVCMOS33;
+NET "address[4]" IOSTANDARD = LVCMOS33;
+NET "address[3]" IOSTANDARD = LVCMOS33;
+NET "address[2]" IOSTANDARD = LVCMOS33;
+NET "address[1]" IOSTANDARD = LVCMOS33;
+NET "address[0]" IOSTANDARD = LVCMOS33;
+
+NET "IR" LOC = P30;
+NET "IR" IOSTANDARD = LVCMOS33;
+NET "IR" KEEPER;
+

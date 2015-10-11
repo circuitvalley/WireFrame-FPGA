@@ -1,0 +1,552 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: nec_decoder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "nec_decoder.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "nec_decoder"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-vq100
+
+---- Source Options
+Top Module Name                    : nec_decoder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "timer.v" in library work
+Compiling verilog file "nec_decoder.v" in library work
+Module <timer> compiled
+Module <nec_decoder> compiled
+No errors in compilation
+Analysis of file <"nec_decoder.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <nec_decoder> in library <work> with parameters.
+	CLOCK_INPUT = "00000001011111010111100001000000"
+	OUT_TIME200ms = "00000000010011000100101101000000"
+	OUT_TIME50ms = "00000000000100110001001011010000"
+	TICKS0o2ms = "0000000011001000"
+	TICKS11ms = "0010101011111000"
+	TICKS1o2ms = "0000010010110000"
+	TICKS1o9ms = "0000011101101100"
+	TICKS2o3ms = "0000100011111100"
+	TICKS2o7ms = "0000101010001100"
+	TICKS3ms = "0000101110111000"
+	TICKS5o5ms = "0001010101111100"
+	TICKS8ms = "0001111101000000"
+
+Analyzing hierarchy for module <timer> in library <work> with parameters.
+	CLOCK_INPUT = "00000001011111010111100001000000"
+	PRESCALE = "00000000000000000000000000011001"
+	size = "00000000000000000000000000010000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <nec_decoder>.
+	CLOCK_INPUT = 32'sb00000001011111010111100001000000
+	OUT_TIME200ms = 32'sb00000000010011000100101101000000
+	OUT_TIME50ms = 32'sb00000000000100110001001011010000
+	TICKS0o2ms = 16'b0000000011001000
+	TICKS11ms = 16'b0010101011111000
+	TICKS1o2ms = 16'b0000010010110000
+	TICKS1o9ms = 16'b0000011101101100
+	TICKS2o3ms = 16'b0000100011111100
+	TICKS2o7ms = 16'b0000101010001100
+	TICKS3ms = 16'b0000101110111000
+	TICKS5o5ms = 16'b0001010101111100
+	TICKS8ms = 16'b0001111101000000
+Module <nec_decoder> is correct for synthesis.
+ 
+Analyzing module <timer> in library <work>.
+	CLOCK_INPUT = 32'sb00000001011111010111100001000000
+	PRESCALE = 32'sb00000000000000000000000000011001
+	size = 32'sb00000000000000000000000000010000
+Module <timer> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <cleaer_timer_prescale> in unit <nec_decoder> has a constant value of 00 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <timer>.
+    Related source file is "timer.v".
+    Found 16-bit up counter for signal <count>.
+    Found 16-bit comparator greatequal for signal <count$cmp_ge0000> created at line 50.
+    Found 5-bit up counter for signal <prescale>.
+    Found 16-bit comparator less for signal <prescale$cmp_lt0000> created at line 50.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <timer> synthesized.
+
+
+Synthesizing Unit <nec_decoder>.
+    Related source file is "nec_decoder.v".
+WARNING:Xst:646 - Signal <cleaer_timer_prescale> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <TIMEOUT>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 39                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | TIMEOUT$not0000           (positive)           |
+    | Power Up State     | 0010101011111000                               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <PREPULSE>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 75                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | TIMEOUT$not0000           (positive)           |
+    | Power Up State     | 0001111101000000                               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <address>.
+    Found 8-bit register for signal <data>.
+    Found 1-bit register for signal <dataready>.
+    Found 1-bit register for signal <clear>.
+    Found 2-bit register for signal <last>.
+    Found 16-bit comparator greater for signal <mux0031$cmp_gt0000> created at line 146.
+    Found 7-bit register for signal <necpoj>.
+    Found 7-bit comparator greater for signal <necpoj$cmp_gt0000> created at line 158.
+    Found 7-bit adder for signal <old_necpoj_3$add0000> created at line 139.
+    Found 24-bit adder for signal <old_outtimer_1$add0000> created at line 79.
+    Found 24-bit register for signal <outtimer>.
+    Found 7-bit comparator lessequal for signal <PREPULSE$cmp_le0000> created at line 158.
+    Found 32-bit register for signal <rxbuffer>.
+    Found 7-bit comparator greatequal for signal <rxbuffer_31$cmp_ge0000> created at line 136.
+    Found 16-bit comparator greatequal for signal <rxbuffer_31$cmp_ge0001> created at line 95.
+    Found 7-bit comparator lessequal for signal <rxbuffer_31$cmp_le0000> created at line 136.
+    Found 16-bit comparator lessequal for signal <rxbuffer_31$cmp_le0001> created at line 95.
+    Found 7-bit comparator greater for signal <TIMEOUT$cmp_gt0000> created at line 158.
+    Found 7-bit comparator greater for signal <TIMEOUT$cmp_gt0001> created at line 136.
+    Found 16-bit comparator greater for signal <TIMEOUT$cmp_gt0002> created at line 95.
+    Found 16-bit comparator greater for signal <TIMEOUT$cmp_gt0003> created at line 110.
+    Found 7-bit comparator less for signal <TIMEOUT$cmp_lt0000> created at line 136.
+    Found 16-bit comparator less for signal <TIMEOUT$cmp_lt0001> created at line 95.
+    Found 16-bit comparator less for signal <TIMEOUT$cmp_lt0002> created at line 110.
+    Found 1-bit xor2 for signal <TIMEOUT$xor0000> created at line 92.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+Unit <nec_decoder> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 24-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 39
+ 1-bit register                                        : 34
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 16
+ 16-bit comparator greatequal                          : 2
+ 16-bit comparator greater                             : 3
+ 16-bit comparator less                                : 3
+ 16-bit comparator lessequal                           : 1
+ 7-bit comparator greatequal                           : 1
+ 7-bit comparator greater                              : 3
+ 7-bit comparator less                                 : 1
+ 7-bit comparator lessequal                            : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <PREPULSE/FSM> on signal <PREPULSE[1:2]> with sequential encoding.
+------------------------------
+ State            | Encoding
+------------------------------
+ 0001111101000000 | 00
+ 0000011101101100 | 01
+ 0000000011001000 | 10
+------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <TIMEOUT/FSM> on signal <TIMEOUT[1:2]> with sequential encoding.
+------------------------------
+ State            | Encoding
+------------------------------
+ 0010101011111000 | 00
+ 0001010101111100 | 01
+ 0000100011111100 | 10
+------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 3
+ 24-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 83
+ Flip-Flops                                            : 83
+# Comparators                                          : 16
+ 16-bit comparator greatequal                          : 2
+ 16-bit comparator greater                             : 3
+ 16-bit comparator less                                : 3
+ 16-bit comparator lessequal                           : 1
+ 7-bit comparator greatequal                           : 1
+ 7-bit comparator greater                              : 3
+ 7-bit comparator less                                 : 1
+ 7-bit comparator lessequal                            : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <nec_decoder> ...
+
+Optimizing unit <timer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block nec_decoder, actual ratio is 6.
+FlipFlop necpoj_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 109
+ Flip-Flops                                            : 109
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : nec_decoder.ngr
+Top Level Output File Name         : nec_decoder
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 444
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 47
+#      LUT2                        : 25
+#      LUT2_D                      : 3
+#      LUT2_L                      : 1
+#      LUT3                        : 58
+#      LUT3_D                      : 5
+#      LUT3_L                      : 10
+#      LUT4                        : 122
+#      LUT4_D                      : 11
+#      LUT4_L                      : 9
+#      MUXCY                       : 92
+#      MUXF5                       : 8
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 109
+#      FD                          : 3
+#      FDCE                        : 16
+#      FDE                         : 65
+#      FDR                         : 24
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 1
+#      OBUF                        : 17
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250evq100-4 
+
+ Number of Slices:                      161  out of   2448     6%  
+ Number of Slice Flip Flops:            109  out of   4896     2%  
+ Number of 4 input LUTs:                302  out of   4896     6%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of     66    28%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 109   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+clear(clear:Q)                     | NONE(t0/count_0)       | 16    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.361ns (Maximum Frequency: 96.516MHz)
+   Minimum input arrival time before clock: 6.257ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.361ns (frequency: 96.516MHz)
+  Total number of paths / destination ports: 37540 / 214
+-------------------------------------------------------------------------
+Delay:               10.361ns (Levels of Logic = 15)
+  Source:            PREPULSE_FSM_FFd1 (FF)
+  Destination:       outtimer_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PREPULSE_FSM_FFd1 to outtimer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.591   1.136  PREPULSE_FSM_FFd1 (PREPULSE_FSM_FFd1)
+     LUT2:I0->O            0   0.704   0.000  PREPULSE_or00021 (PREPULSE_or0002)
+     MUXCY:DI->O           1   0.888   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<2> (Mcompar_TIMEOUT_cmp_gt0002_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<3> (Mcompar_TIMEOUT_cmp_gt0002_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<4> (Mcompar_TIMEOUT_cmp_gt0002_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<5> (Mcompar_TIMEOUT_cmp_gt0002_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<6> (Mcompar_TIMEOUT_cmp_gt0002_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<7> (Mcompar_TIMEOUT_cmp_gt0002_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<8> (Mcompar_TIMEOUT_cmp_gt0002_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<9> (Mcompar_TIMEOUT_cmp_gt0002_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<10> (Mcompar_TIMEOUT_cmp_gt0002_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_TIMEOUT_cmp_gt0002_cy<11> (Mcompar_TIMEOUT_cmp_gt0002_cy<11>)
+     MUXCY:CI->O           7   0.459   0.787  Mcompar_TIMEOUT_cmp_gt0002_cy<12> (Mcompar_TIMEOUT_cmp_gt0002_cy<12>)
+     LUT2_D:I1->LO         1   0.704   0.104  TIMEOUT_FSM_FFd1-In112 (N151)
+     LUT4:I3->O           10   0.704   0.886  outtimer_and000112 (data_not0001)
+     LUT4:I3->O           24   0.704   1.252  outtimer_and00011 (outtimer_and0001)
+     FDR:R                     0.911          outtimer_0
+    ----------------------------------------
+    Total                     10.361ns (6.196ns logic, 4.165ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 34 / 33
+-------------------------------------------------------------------------
+Offset:              6.257ns (Levels of Logic = 5)
+  Source:            IR (PAD)
+  Destination:       TIMEOUT_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: IR to TIMEOUT_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.932  IR_IBUF (IR_IBUF)
+     LUT2_D:I0->LO         1   0.704   0.104  outtimer_mux0001<0>131 (N139)
+     LUT4:I3->O            1   0.704   0.455  TIMEOUT_FSM_FFd1-In8 (TIMEOUT_FSM_FFd1-In8)
+     LUT4:I2->O            1   0.704   0.424  TIMEOUT_FSM_FFd1-In46_SW0 (N122)
+     LUT4:I3->O            1   0.704   0.000  TIMEOUT_FSM_FFd1-In46 (TIMEOUT_FSM_FFd1-In)
+     FDE:D                     0.308          TIMEOUT_FSM_FFd1
+    ----------------------------------------
+    Total                      6.257ns (4.342ns logic, 1.915ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            dataready (FF)
+  Destination:       dataready (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dataready to dataready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  dataready (dataready_OBUF)
+     OBUF:I->O                 3.272          dataready_OBUF (dataready)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.94 secs
+ 
+--> 
+
+Total memory usage is 268092 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

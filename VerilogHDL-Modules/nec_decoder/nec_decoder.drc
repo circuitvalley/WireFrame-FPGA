@@ -1,8 +1,0 @@
-Release 14.2 Drc P.28xd (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Sat Oct 10 10:28:07 2015
-
-drc -z nec_decoder.ncd nec_decoder.pcf
-
-DRC detected 0 errors and 0 warnings.

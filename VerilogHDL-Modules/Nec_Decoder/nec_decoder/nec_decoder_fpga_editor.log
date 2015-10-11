@@ -1,0 +1,29 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.28xd
+#Current Working Directory:
+#:D   C:\Users\Gaurav\Documents\FPGA\Xilinx ISE\NECIR_Decoder\nec_decoder
+#Date/Time:
+#:T   Sun Oct 11 15:54:15 2015
+#------------------------------
+	#Reading nec_decoder.ncd...
+	#Loading device for application Rf_Device from file '3s250e.nph' in environment C:\Xilinx\14.2\ISE_DS\ISE\.
+	#   "nec_decoder" is an NCD, version 3.2, device xc3s250e, package vq100, speed -4
+	#Design creation date: 2015.10.11.10.21.23
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select -k comp 'address_5'
+	#4
+unselect comp 'address_5'
+	#5
+select -k comp 'Mcompar_TIMEOUT_cmp_gt0003_cy<5>1'
+	#6
+unselect comp 'Mcompar_TIMEOUT_cmp_gt0003_cy<5>1'
+	#7
+select -k comp 'Mcompar_TIMEOUT_cmp_lt0001_cy<5>'

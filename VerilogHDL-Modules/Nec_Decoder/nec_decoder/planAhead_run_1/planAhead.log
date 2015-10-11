@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Mon Oct 12 00:13:45 2015
+# Process ID: 3976
+# Log file: C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -559 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/pa.fromNetlist.tcl}
+# create_project -name nec_decoder -dir "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/planAhead_run_1" -part xc3s250evq100-4
+Parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [C:/Xilinx/14.2/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "nec_decoder.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.ucf' to fileset 'constrs_1'
+# add_files [list {nec_decoder.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s250evq100-4
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80832 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/nec_decoder.data/cache/nec_decoder_ngc_b74fea90.edif]
+Finished Parsing EDIF File [./planAhead_run_1/nec_decoder.data/cache/nec_decoder_ngc_b74fea90.edif]
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/vq100/Package.xml
+Loading io standards from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/vq100/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.2/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.2/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.ucf]
+Finished Parsing UCF File [C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/nec_decoder.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (HD_IBUFG, HD_BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: 292b2ce4
+link_design: Time (s): elapsed = 00:00:07 . Memory (MB): peak = 537.641 ; gain = 84.078
+set_property drive 8 [get_ports [list {data[0]}]]
+save_design
+exit
+INFO: [Common 17-206] Exiting PlanAhead...
+INFO: [Common 17-83] Releasing license: PlanAhead

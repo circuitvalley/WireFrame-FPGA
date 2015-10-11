@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Mon Oct 12 00:13:45 2015
+# Process ID: 3976
+# Log file: C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/NECIR_Decoder/nec_decoder/pa.fromNetlist.tcl}
+set_property drive 8 [get_ports [list {data[0]}]]
+save_design

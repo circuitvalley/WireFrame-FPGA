@@ -1,0 +1,120 @@
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80512 kilobytes
+
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80512 kilobytes
+
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80512 kilobytes
+
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80320 kilobytes
+
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80512 kilobytes
+
+Release 14.2 - ngc2edif P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design nec_decoder.ngc ...
+WARNING:NetListWriters:298 - No output is written to nec_decoder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_gt0002_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0001_lut<12 : 0>
+   on block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_TIMEOUT_cmp_lt0002_lut<7 : 0> on
+   block nec_decoder is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nec_decoder.edif ...
+ngc2edif: Total memory usage is 80832 kilobytes
+
