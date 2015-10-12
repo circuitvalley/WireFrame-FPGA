@@ -1,0 +1,4 @@
+MO bcd_to_seg NULL bcd_to_seg.v vlg19/bcd__to__seg.bin 1444670073
+MO counter NULL counter.v vlg10/counter.bin 1444670073
+MO freq_meter NULL freq_meter.v vlg02/freq__meter.bin 1444670073
+MO bin_to_bcd NULL bin_to_bcd.v vlg6B/bin__to__bcd.bin 1444670073

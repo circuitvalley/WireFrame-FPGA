@@ -1,0 +1,63 @@
+
+NET "clk" LOC = P89;
+
+
+NET "digit[0]" LOC = P94;
+NET "digit[1]" LOC = P95;
+NET "digit[2]" LOC = P2;
+NET "digit[3]" LOC = P3;
+NET "digit[4]" LOC = P11;
+NET "digit[5]" LOC = P12;
+NET "digit[6]" LOC = P22;
+NET "digit[7]" LOC = P23;
+
+NET "digit[7]" IOSTANDARD = LVCMOS33;
+NET "digit[6]" IOSTANDARD = LVCMOS33;
+NET "digit[5]" IOSTANDARD = LVCMOS33;
+NET "digit[4]" IOSTANDARD = LVCMOS33;
+NET "digit[3]" IOSTANDARD = LVCMOS33;
+NET "digit[2]" IOSTANDARD = LVCMOS33;
+NET "digit[1]" IOSTANDARD = LVCMOS33;
+NET "digit[0]" IOSTANDARD = LVCMOS33;
+
+NET "digit[7]" DRIVE = 4;
+NET "digit[6]" DRIVE = 4;
+NET "digit[5]" DRIVE = 4;
+NET "digit[4]" DRIVE = 4;
+NET "digit[3]" DRIVE = 4;
+NET "digit[2]" DRIVE = 4;
+NET "digit[1]" DRIVE = 4;
+NET "digit[0]" DRIVE = 4;
+
+
+NET "segment[0]" LOC = P32;
+NET "segment[1]" LOC = P33;
+NET "segment[2]" LOC = P34;
+NET "segment[3]" LOC = P35;
+NET "segment[4]" LOC = P36;
+NET "segment[5]" LOC = P79;
+NET "segment[6]" LOC = P78;
+NET "segment[7]" LOC = P68;
+
+NET "segment[0]" DRIVE = 4;
+NET "segment[1]" DRIVE = 4;
+NET "segment[2]" DRIVE = 4;
+NET "segment[3]" DRIVE = 4;
+NET "segment[4]" DRIVE = 4;
+NET "segment[5]" DRIVE = 4;
+NET "segment[6]" DRIVE = 4;
+NET "segment[7]" DRIVE = 4;
+
+NET "segment[7]" IOSTANDARD = LVCMOS33;
+NET "segment[6]" IOSTANDARD = LVCMOS33;
+NET "segment[5]" IOSTANDARD = LVCMOS33;
+NET "segment[4]" IOSTANDARD = LVCMOS33;
+NET "segment[3]" IOSTANDARD = LVCMOS33;
+NET "segment[2]" IOSTANDARD = LVCMOS33;
+NET "segment[1]" IOSTANDARD = LVCMOS33;
+NET "segment[0]" IOSTANDARD = LVCMOS33;
+
+NET "sigin" LOC = P38;
+//NET "sigin" IOSTANDARD = LVCMOS33;
+NET "sigin" KEEPER;
+

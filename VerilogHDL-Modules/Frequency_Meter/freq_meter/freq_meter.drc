@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Mon Oct 12 22:45:26 2015
+
+drc -z freq_meter.ncd freq_meter.pcf
+
+DRC detected 0 errors and 0 warnings.

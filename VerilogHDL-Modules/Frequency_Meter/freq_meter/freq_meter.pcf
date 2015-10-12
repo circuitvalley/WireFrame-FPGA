@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Mon Oct 12 22:45:07 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P89" LEVEL 1;
+COMP "segment<0>" LOCATE = SITE "P32" LEVEL 1;
+COMP "segment<1>" LOCATE = SITE "P33" LEVEL 1;
+COMP "segment<2>" LOCATE = SITE "P34" LEVEL 1;
+COMP "segment<3>" LOCATE = SITE "P35" LEVEL 1;
+COMP "segment<4>" LOCATE = SITE "P36" LEVEL 1;
+COMP "segment<5>" LOCATE = SITE "P79" LEVEL 1;
+COMP "segment<6>" LOCATE = SITE "P78" LEVEL 1;
+COMP "segment<7>" LOCATE = SITE "P68" LEVEL 1;
+COMP "sigin" LOCATE = SITE "P38" LEVEL 1;
+COMP "digit<0>" LOCATE = SITE "P94" LEVEL 1;
+COMP "digit<1>" LOCATE = SITE "P95" LEVEL 1;
+COMP "digit<2>" LOCATE = SITE "P2" LEVEL 1;
+COMP "digit<3>" LOCATE = SITE "P3" LEVEL 1;
+COMP "digit<4>" LOCATE = SITE "P11" LEVEL 1;
+COMP "digit<5>" LOCATE = SITE "P12" LEVEL 1;
+COMP "digit<6>" LOCATE = SITE "P22" LEVEL 1;
+COMP "digit<7>" LOCATE = SITE "P23" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "sigin_BUFGP/IBUFG" BEL "sigin_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o freq_meter_map.ncd freq_meter.ngd freq_meter.pcf 
+par -w -intstyle ise -ol high -t 1 freq_meter_map.ncd freq_meter.ncd freq_meter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml freq_meter.twx freq_meter.ncd -o freq_meter.twr freq_meter.pcf 
+bitgen -intstyle ise -f freq_meter.ut freq_meter.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.syr" 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o freq_meter_map.ncd freq_meter.ngd freq_meter.pcf 
+par -w -intstyle ise -ol high -t 1 freq_meter_map.ncd freq_meter.ncd freq_meter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml freq_meter.twx freq_meter.ncd -o freq_meter.twr freq_meter.pcf 
+bitgen -intstyle ise -f freq_meter.ut freq_meter.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc freq_meter.ucf -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc freq_meter.ucf -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc freq_meter.ucf -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o freq_meter_map.ncd freq_meter.ngd freq_meter.pcf 
+par -w -intstyle ise -ol high -t 1 freq_meter_map.ncd freq_meter.ncd freq_meter.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc freq_meter.ucf -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o freq_meter_map.ncd freq_meter.ngd freq_meter.pcf 
+par -w -intstyle ise -ol high -t 1 freq_meter_map.ncd freq_meter.ncd freq_meter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml freq_meter.twx freq_meter.ncd -o freq_meter.twr freq_meter.pcf -ucf freq_meter.ucf 
+bitgen -intstyle ise -f freq_meter.ut freq_meter.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc freq_meter.ucf -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o freq_meter_map.ncd freq_meter.ngd freq_meter.pcf 
+par -w -intstyle ise -ol high -t 1 freq_meter_map.ncd freq_meter.ncd freq_meter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml freq_meter.twx freq_meter.ncd -o freq_meter.twr freq_meter.pcf -ucf freq_meter.ucf 
+bitgen -intstyle ise -f freq_meter.ut freq_meter.ncd 
+xst -intstyle ise -ifn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.xst" -ofn "C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/freq_meter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc freq_meter.ucf -p xc3s250e-vq100-4 "freq_meter.ngc" freq_meter.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o freq_meter_map.ncd freq_meter.ngd freq_meter.pcf 
+par -w -intstyle ise -ol high -t 1 freq_meter_map.ncd freq_meter.ncd freq_meter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml freq_meter.twx freq_meter.ncd -o freq_meter.twr freq_meter.pcf -ucf freq_meter.ucf 
+bitgen -intstyle ise -f freq_meter.ut freq_meter.ncd 

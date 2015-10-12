@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Mon Oct 12 22:24:15 2015
+# Process ID: 3108
+# Log file: C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Gaurav/Documents/FPGA/Xilinx ISE/frequency_meter/freq_meter/pa.fromNetlist.tcl}
+startgroup
+set_property package_pin P32 [get_ports {segment[0]}]
+endgroup

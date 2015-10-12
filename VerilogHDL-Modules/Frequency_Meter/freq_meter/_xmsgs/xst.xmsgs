@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;freq_meter.v&quot; line 43 </arg>Connection to output port &apos;<arg fmt="%s" index="2">segment</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;freq_meter.v&quot; line 44 </arg>Connection to input port &apos;<arg fmt="%s" index="2">bin</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="old" ><arg fmt="%s" index="1">&quot;freq_meter.v&quot; line 46 </arg>Connection to output port &apos;<arg fmt="%s" index="2">count</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="Xst" num="905" delta="old" >&quot;<arg fmt="%s" index="1">bin_to_bcd.v</arg>&quot; line <arg fmt="%d" index="2">30</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;HUNDMIL&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">freq&lt;31:27&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">freq_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">freq_meter</arg>&gt;.
+</msg>
+
+</messages>
+

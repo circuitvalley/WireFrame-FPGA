@@ -1,0 +1,833 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: freq_meter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "freq_meter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "freq_meter"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-vq100
+
+---- Source Options
+Top Module Name                    : freq_meter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "counter.v" in library work
+Compiling verilog file "bin_to_bcd.v" in library work
+Module <counter> compiled
+Compiling verilog file "bcd_to_seg.v" in library work
+Module <bin_to_bcd> compiled
+Compiling verilog file "freq_meter.v" in library work
+Module <bcd_to_seg> compiled
+Module <freq_meter> compiled
+No errors in compilation
+Analysis of file <"freq_meter.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <freq_meter> in library <work>.
+
+Analyzing hierarchy for module <bcd_to_seg> in library <work>.
+
+Analyzing hierarchy for module <bin_to_bcd> in library <work> with parameters.
+	BIN_N_bits = "00000000000000000000000000011000"
+
+Analyzing hierarchy for module <counter> in library <work> with parameters.
+	size = "00000000000000000000000000100001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <freq_meter>.
+Module <freq_meter> is correct for synthesis.
+ 
+Analyzing module <bcd_to_seg> in library <work>.
+Module <bcd_to_seg> is correct for synthesis.
+ 
+Analyzing module <bin_to_bcd> in library <work>.
+	BIN_N_bits = 32'sb00000000000000000000000000011000
+WARNING:Xst:905 - "bin_to_bcd.v" line 30: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <HUNDMIL>
+Module <bin_to_bcd> is correct for synthesis.
+ 
+Analyzing module <counter> in library <work>.
+	size = 32'sb00000000000000000000000000100001
+Module <counter> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bcd_to_seg>.
+    Related source file is "bcd_to_seg.v".
+    Found 16x7-bit ROM for signal <bcd$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bcd_to_seg> synthesized.
+
+
+Synthesizing Unit <bin_to_bcd>.
+    Related source file is "bin_to_bcd.v".
+    Found 4-bit adder for signal <$add0000> created at line 42.
+    Found 4-bit adder for signal <$add0001> created at line 42.
+    Found 4-bit adder for signal <$add0002> created at line 42.
+    Found 4-bit adder for signal <$add0003> created at line 42.
+    Found 4-bit adder for signal <$add0004> created at line 58.
+    Found 4-bit adder for signal <$add0005> created at line 42.
+    Found 4-bit adder for signal <$add0006> created at line 58.
+    Found 4-bit adder for signal <$add0007> created at line 42.
+    Found 4-bit adder for signal <$add0008> created at line 58.
+    Found 4-bit adder for signal <$add0009> created at line 42.
+    Found 4-bit adder for signal <$add0010> created at line 56.
+    Found 4-bit adder for signal <$add0011> created at line 58.
+    Found 4-bit adder for signal <$add0012> created at line 42.
+    Found 4-bit adder for signal <$add0013> created at line 56.
+    Found 4-bit adder for signal <$add0014> created at line 58.
+    Found 4-bit adder for signal <$add0015> created at line 42.
+    Found 4-bit adder for signal <$add0016> created at line 56.
+    Found 4-bit adder for signal <$add0017> created at line 58.
+    Found 4-bit adder for signal <$add0018> created at line 42.
+    Found 4-bit adder for signal <$add0019> created at line 54.
+    Found 4-bit adder for signal <$add0020> created at line 56.
+    Found 4-bit adder for signal <$add0021> created at line 58.
+    Found 4-bit adder for signal <$add0022> created at line 42.
+    Found 4-bit adder for signal <$add0023> created at line 54.
+    Found 4-bit adder for signal <$add0024> created at line 56.
+    Found 4-bit adder for signal <$add0025> created at line 58.
+    Found 4-bit adder for signal <$add0026> created at line 42.
+    Found 4-bit adder for signal <$add0027> created at line 54.
+    Found 4-bit adder for signal <$add0028> created at line 56.
+    Found 4-bit adder for signal <$add0029> created at line 58.
+    Found 4-bit adder for signal <$add0030> created at line 42.
+    Found 4-bit adder for signal <$add0031> created at line 52.
+    Found 4-bit adder for signal <$add0032> created at line 54.
+    Found 4-bit adder for signal <$add0033> created at line 56.
+    Found 4-bit adder for signal <$add0034> created at line 58.
+    Found 4-bit adder for signal <$add0035> created at line 42.
+    Found 4-bit adder for signal <$add0036> created at line 52.
+    Found 4-bit adder for signal <$add0037> created at line 54.
+    Found 4-bit adder for signal <$add0038> created at line 56.
+    Found 4-bit adder for signal <$add0039> created at line 58.
+    Found 4-bit adder for signal <$add0040> created at line 42.
+    Found 4-bit adder for signal <$add0041> created at line 52.
+    Found 4-bit adder for signal <$add0042> created at line 54.
+    Found 4-bit adder for signal <$add0043> created at line 56.
+    Found 4-bit adder for signal <$add0044> created at line 58.
+    Found 4-bit adder for signal <$add0045> created at line 42.
+    Found 4-bit adder for signal <$add0046> created at line 50.
+    Found 4-bit adder for signal <$add0047> created at line 52.
+    Found 4-bit adder for signal <$add0048> created at line 54.
+    Found 4-bit adder for signal <$add0049> created at line 56.
+    Found 4-bit adder for signal <$add0050> created at line 58.
+    Found 4-bit adder for signal <$add0051> created at line 42.
+    Found 4-bit adder for signal <$add0052> created at line 50.
+    Found 4-bit adder for signal <$add0053> created at line 52.
+    Found 4-bit adder for signal <$add0054> created at line 54.
+    Found 4-bit adder for signal <$add0055> created at line 56.
+    Found 4-bit adder for signal <$add0056> created at line 58.
+    Found 4-bit adder for signal <$add0057> created at line 42.
+    Found 4-bit adder for signal <$add0058> created at line 50.
+    Found 4-bit adder for signal <$add0059> created at line 52.
+    Found 4-bit adder for signal <$add0060> created at line 54.
+    Found 4-bit adder for signal <$add0061> created at line 56.
+    Found 4-bit adder for signal <$add0062> created at line 58.
+    Found 4-bit adder for signal <$add0063> created at line 42.
+    Found 4-bit adder for signal <$add0064> created at line 48.
+    Found 4-bit adder for signal <$add0065> created at line 50.
+    Found 4-bit adder for signal <$add0066> created at line 52.
+    Found 4-bit adder for signal <$add0067> created at line 54.
+    Found 4-bit adder for signal <$add0068> created at line 56.
+    Found 4-bit adder for signal <$add0069> created at line 58.
+    Found 4-bit adder for signal <$add0070> created at line 42.
+    Found 4-bit adder for signal <$add0071> created at line 48.
+    Found 4-bit adder for signal <$add0072> created at line 50.
+    Found 4-bit adder for signal <$add0073> created at line 52.
+    Found 4-bit adder for signal <$add0074> created at line 54.
+    Found 4-bit adder for signal <$add0075> created at line 56.
+    Found 4-bit adder for signal <$add0076> created at line 58.
+    Found 4-bit adder for signal <$add0077> created at line 42.
+    Found 4-bit adder for signal <$add0078> created at line 48.
+    Found 4-bit adder for signal <$add0079> created at line 50.
+    Found 4-bit adder for signal <$add0080> created at line 52.
+    Found 4-bit adder for signal <$add0081> created at line 54.
+    Found 4-bit adder for signal <$add0082> created at line 56.
+    Found 4-bit adder for signal <$add0083> created at line 58.
+    Found 4-bit adder for signal <$add0084> created at line 42.
+    Found 4-bit adder for signal <$add0085> created at line 46.
+    Found 4-bit adder for signal <$add0086> created at line 48.
+    Found 4-bit adder for signal <$add0087> created at line 50.
+    Found 4-bit adder for signal <$add0088> created at line 52.
+    Found 4-bit adder for signal <$add0089> created at line 54.
+    Found 4-bit adder for signal <$add0090> created at line 56.
+    Found 4-bit adder for signal <$add0091> created at line 58.
+    Found 4-bit adder for signal <$add0092> created at line 42.
+    Found 4-bit adder for signal <$add0093> created at line 46.
+    Found 4-bit adder for signal <$add0094> created at line 48.
+    Found 4-bit adder for signal <$add0095> created at line 50.
+    Found 4-bit adder for signal <$add0096> created at line 52.
+    Found 4-bit adder for signal <$add0097> created at line 54.
+    Found 4-bit adder for signal <$add0098> created at line 56.
+    Found 4-bit adder for signal <$add0099> created at line 58.
+    Found 4-bit adder for signal <$add0100> created at line 42.
+    Found 4-bit adder for signal <$add0101> created at line 46.
+    Found 4-bit adder for signal <$add0102> created at line 48.
+    Found 4-bit adder for signal <$add0103> created at line 50.
+    Found 4-bit adder for signal <$add0104> created at line 52.
+    Found 4-bit adder for signal <$add0105> created at line 54.
+    Found 4-bit adder for signal <$add0106> created at line 56.
+    Found 4-bit adder for signal <$add0107> created at line 58.
+    Found 4-bit adder for signal <$add0108> created at line 42.
+    Found 4-bit adder for signal <$add0109> created at line 44.
+    Found 4-bit adder for signal <$add0110> created at line 46.
+    Found 4-bit adder for signal <$add0111> created at line 48.
+    Found 4-bit adder for signal <$add0112> created at line 50.
+    Found 4-bit adder for signal <$add0113> created at line 52.
+    Found 4-bit adder for signal <$add0114> created at line 54.
+    Found 4-bit adder for signal <$add0115> created at line 56.
+    Found 4-bit adder for signal <$add0116> created at line 58.
+    Found 4-bit adder for signal <$add0117> created at line 42.
+    Found 4-bit adder for signal <$add0118> created at line 44.
+    Found 4-bit adder for signal <$add0119> created at line 46.
+    Found 4-bit adder for signal <$add0120> created at line 48.
+    Found 4-bit adder for signal <$add0121> created at line 50.
+    Found 4-bit adder for signal <$add0122> created at line 52.
+    Found 4-bit adder for signal <$add0123> created at line 54.
+    Found 4-bit adder for signal <$add0124> created at line 56.
+    Found 4-bit adder for signal <$add0125> created at line 58.
+    Found 4-bit adder for signal <$add0126> created at line 42.
+    Found 4-bit adder for signal <$add0127> created at line 44.
+    Found 4-bit adder for signal <$add0128> created at line 46.
+    Found 4-bit adder for signal <$add0129> created at line 48.
+    Found 4-bit adder for signal <$add0130> created at line 50.
+    Found 4-bit adder for signal <$add0131> created at line 52.
+    Found 4-bit adder for signal <$add0132> created at line 54.
+    Found 4-bit adder for signal <$add0133> created at line 56.
+    Found 4-bit adder for signal <$add0134> created at line 58.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0000> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0001> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0002> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0003> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0004> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0005> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0006> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0007> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0008> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0009> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0010> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0011> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0012> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0013> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0014> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0015> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0016> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0017> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0018> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0019> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0020> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0021> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0022> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0023> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0024> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0025> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL$cmp_ge0026> created at line 41.
+    Found 4-bit comparator greatequal for signal <HUNDMIL_0$cmp_ge0000> created at line 43.
+    Found 4-bit comparator greatequal for signal <HUNDMIL_0$cmp_ge0001> created at line 43.
+    Found 4-bit comparator greatequal for signal <HUNDMIL_0$cmp_ge0002> created at line 43.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0000> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0001> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0002> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0003> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0004> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0005> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0006> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0007> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0008> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0009> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0010> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0011> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0012> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0013> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0014> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0015> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0016> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0017> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0018> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0019> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNDREDS_0$cmp_ge0020> created at line 55.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0000> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0001> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0002> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0003> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0004> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0005> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0006> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0007> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0008> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0009> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0010> created at line 49.
+    Found 4-bit comparator greatequal for signal <HUNTH_0$cmp_ge0011> created at line 49.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0000> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0001> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0002> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0003> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0004> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0005> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0006> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0007> created at line 47.
+    Found 4-bit comparator greatequal for signal <MIL_0$cmp_ge0008> created at line 47.
+    Found 4-bit comparator greatequal for signal <TENMIL_0$cmp_ge0000> created at line 45.
+    Found 4-bit comparator greatequal for signal <TENMIL_0$cmp_ge0001> created at line 45.
+    Found 4-bit comparator greatequal for signal <TENMIL_0$cmp_ge0002> created at line 45.
+    Found 4-bit comparator greatequal for signal <TENMIL_0$cmp_ge0003> created at line 45.
+    Found 4-bit comparator greatequal for signal <TENMIL_0$cmp_ge0004> created at line 45.
+    Found 4-bit comparator greatequal for signal <TENMIL_0$cmp_ge0005> created at line 45.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0000> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0001> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0002> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0003> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0004> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0005> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0006> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0007> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0008> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0009> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0010> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0011> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0012> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0013> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0014> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0015> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0016> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0017> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0018> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0019> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0020> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0021> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0022> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENS_0$cmp_ge0023> created at line 57.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0000> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0001> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0002> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0003> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0004> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0005> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0006> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0007> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0008> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0009> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0010> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0011> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0012> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0013> created at line 51.
+    Found 4-bit comparator greatequal for signal <TENTH_0$cmp_ge0014> created at line 51.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0000> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0001> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0002> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0003> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0004> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0005> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0006> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0007> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0008> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0009> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0010> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0011> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0012> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0013> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0014> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0015> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0016> created at line 53.
+    Found 4-bit comparator greatequal for signal <TH_0$cmp_ge0017> created at line 53.
+    Summary:
+	inferred 135 Adder/Subtractor(s).
+	inferred 135 Comparator(s).
+Unit <bin_to_bcd> synthesized.
+
+
+Synthesizing Unit <counter>.
+    Related source file is "counter.v".
+    Found 33-bit up counter for signal <count>.
+    Found 33-bit comparator less for signal <count$cmp_lt0000> created at line 51.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <freq_meter>.
+    Related source file is "freq_meter.v".
+WARNING:Xst:646 - Signal <freq<31:27>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <digit>.
+    Found 4-bit 8-to-1 multiplexer for signal <$varindex0000> created at line 43.
+    Found 3-bit up counter for signal <digit_scan>.
+    Found 24-bit up counter for signal <disp_scanner>.
+    Found 32-bit register for signal <freq>.
+    Found 1-bit register for signal <gate>.
+    Found 32-bit register for signal <gatecounter>.
+    Found 32-bit subtractor for signal <gatecounter$sub0000> created at line 65.
+    Found 24-bit adder for signal <old_disp_scanner_2$add0000> created at line 68.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  73 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <freq_meter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 137
+ 24-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 135
+# Counters                                             : 3
+ 24-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 33-bit up counter                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 32-bit register                                       : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 136
+ 33-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 135
+# Multiplexers                                         : 1
+ 4-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <freq_27> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_28> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_29> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_30> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_31> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_27> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_28> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_29> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_30> of sequential type is unconnected in block <freq_meter>.
+WARNING:Xst:2677 - Node <freq_31> of sequential type is unconnected in block <freq_meter>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 110
+ 24-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 105
+# Counters                                             : 3
+ 24-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 33-bit up counter                                     : 1
+# Registers                                            : 68
+ Flip-Flops                                            : 68
+# Comparators                                          : 109
+ 33-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 108
+# Multiplexers                                         : 1
+ 4-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <freq_meter> ...
+
+Optimizing unit <bin_to_bcd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block freq_meter, actual ratio is 15.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : freq_meter.ngr
+Top Level Output File Name         : freq_meter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 921
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 79
+#      LUT2                        : 21
+#      LUT3                        : 167
+#      LUT4                        : 361
+#      MUXCY                       : 132
+#      MUXF5                       : 16
+#      MUXF6                       : 4
+#      VCC                         : 1
+#      XORCY                       : 113
+# FlipFlops/Latches                : 128
+#      FD                          : 32
+#      FDCE                        : 33
+#      FDE                         : 38
+#      FDR                         : 25
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 16
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250evq100-4 
+
+ Number of Slices:                      363  out of   2448    14%  
+ Number of Slice Flip Flops:            128  out of   4896     2%  
+ Number of 4 input LUTs:                654  out of   4896    13%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of     66    27%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 95    |
+sigin                              | BUFGP                  | 33    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+gate_inv(gate_inv1_INV_0:O)        | NONE(c1/count_0)       | 33    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.462ns (Maximum Frequency: 118.173MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 70.818ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.462ns (frequency: 118.173MHz)
+  Total number of paths / destination ports: 18254 / 130
+-------------------------------------------------------------------------
+Delay:               8.462ns (Levels of Logic = 26)
+  Source:            disp_scanner_1 (FF)
+  Destination:       disp_scanner_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: disp_scanner_1 to disp_scanner_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  disp_scanner_1 (disp_scanner_1)
+     LUT1:I0->O            1   0.704   0.000  Madd_old_disp_scanner_2_add0000_cy<1>_rt (Madd_old_disp_scanner_2_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_old_disp_scanner_2_add0000_cy<1> (Madd_old_disp_scanner_2_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<2> (Madd_old_disp_scanner_2_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<3> (Madd_old_disp_scanner_2_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<4> (Madd_old_disp_scanner_2_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<5> (Madd_old_disp_scanner_2_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<6> (Madd_old_disp_scanner_2_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<7> (Madd_old_disp_scanner_2_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<8> (Madd_old_disp_scanner_2_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<9> (Madd_old_disp_scanner_2_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<10> (Madd_old_disp_scanner_2_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<11> (Madd_old_disp_scanner_2_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<12> (Madd_old_disp_scanner_2_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<13> (Madd_old_disp_scanner_2_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<14> (Madd_old_disp_scanner_2_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<15> (Madd_old_disp_scanner_2_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<16> (Madd_old_disp_scanner_2_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<17> (Madd_old_disp_scanner_2_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<18> (Madd_old_disp_scanner_2_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<19> (Madd_old_disp_scanner_2_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<20> (Madd_old_disp_scanner_2_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<21> (Madd_old_disp_scanner_2_add0000_cy<21>)
+     MUXCY:CI->O           0   0.059   0.000  Madd_old_disp_scanner_2_add0000_cy<22> (Madd_old_disp_scanner_2_add0000_cy<22>)
+     XORCY:CI->O           1   0.804   0.424  Madd_old_disp_scanner_2_add0000_xor<23> (old_disp_scanner_2_add0000<23>)
+     LUT4:I3->O            1   0.704   0.000  digit_cmp_eq00001_wg_lut<5> (digit_cmp_eq00001_wg_lut<5>)
+     MUXCY:S->O           35   0.736   1.263  digit_cmp_eq00001_wg_cy<5> (digit_cmp_eq0000)
+     FDR:R                     0.911          disp_scanner_0
+    ----------------------------------------
+    Total                      8.462ns (6.153ns logic, 2.309ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sigin'
+  Clock period: 6.279ns (frequency: 159.273MHz)
+  Total number of paths / destination ports: 1650 / 66
+-------------------------------------------------------------------------
+Delay:               6.279ns (Levels of Logic = 11)
+  Source:            c1/count_0 (FF)
+  Destination:       c1/count_0 (FF)
+  Source Clock:      sigin rising
+  Destination Clock: sigin rising
+
+  Data Path: c1/count_0 to c1/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.706  c1/count_0 (c1/count_0)
+     LUT4:I0->O            1   0.704   0.000  c1/Mcompar_count_cmp_lt0000_lut<0> (c1/Mcompar_count_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  c1/Mcompar_count_cmp_lt0000_cy<0> (c1/Mcompar_count_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<1> (c1/Mcompar_count_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<2> (c1/Mcompar_count_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<3> (c1/Mcompar_count_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<4> (c1/Mcompar_count_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<5> (c1/Mcompar_count_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<6> (c1/Mcompar_count_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  c1/Mcompar_count_cmp_lt0000_cy<7> (c1/Mcompar_count_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.459   0.420  c1/Mcompar_count_cmp_lt0000_cy<8> (c1/Mcompar_count_cmp_lt0000_cy<8>)
+     INV:I->O             33   0.704   1.263  c1/Mcompar_count_cmp_lt0000_cy<8>_inv_INV_0 (c1/count_cmp_lt0000)
+     FDCE:CE                   0.555          c1/count_0
+    ----------------------------------------
+    Total                      6.279ns (3.890ns logic, 2.389ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 11054713755328776 / 15
+-------------------------------------------------------------------------
+Offset:              70.818ns (Levels of Logic = 53)
+  Source:            freq_24 (FF)
+  Destination:       segment<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: freq_24 to segment<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.591   0.995  freq_24 (freq_24)
+     LUT4:I0->O            7   0.704   0.787  b1/TENS_0_mux00011 (b1/TENS_0_mux0001)
+     LUT4:I1->O            6   0.704   0.748  b1/TENS_0_mux000211 (b1/N109)
+     LUT4:I1->O            4   0.704   0.622  b1/ONES_mux00071 (b1/Madd__add0011_lut<2>)
+     LUT4:I2->O            4   0.704   0.622  b1/TENS_0_mux00031 (b1/Madd__add0013_cy<0>)
+     LUT4:I2->O            2   0.704   0.622  b1/Madd__add0013_cy<1>11 (b1/Madd__add0013_cy<1>)
+     LUT3:I0->O            1   0.704   0.000  b1/HUNDREDS_0_mux000136_G (N141)
+     MUXF5:I1->O           7   0.321   0.883  b1/HUNDREDS_0_mux000136 (b1/HUNDREDS_0_mux0001)
+     LUT3:I0->O            4   0.704   0.666  b1/Madd__add0016_cy<1>11 (b1/Madd__add0016_cy<1>)
+     LUT3:I1->O            3   0.704   0.610  b1/HUNDREDS_0_cmp_ge00021 (b1/HUNDREDS_0_cmp_ge0002)
+     LUT3:I1->O            4   0.704   0.762  b1/Madd__add0020_cy<1>11 (b1/Madd__add0020_cy<1>)
+     LUT3:I0->O            6   0.704   0.844  b1/HUNDREDS_0_mux00031 (b1/Madd__add0023_cy<0>)
+     LUT4:I0->O            1   0.704   0.000  b1/TH_0_mux0001_G (N133)
+     MUXF5:I1->O          10   0.321   1.057  b1/TH_0_mux0001 (b1/TH_0_mux0001)
+     LUT4:I0->O            3   0.704   0.535  b1/HUNDREDS_mux00041 (b1/Madd__add0027_lut<2>)
+     LUT4:I3->O            8   0.704   0.836  b1/TH_0_mux000211 (b1/N118)
+     LUT4:I1->O            1   0.704   0.000  b1/HUNDREDS_mux000712 (b1/HUNDREDS_mux000711)
+     MUXF5:I0->O           3   0.321   0.566  b1/HUNDREDS_mux00071_f5 (b1/Madd__add0032_lut<2>)
+     LUT3:I2->O            5   0.704   0.712  b1/TH_0_mux000311 (b1/N1211)
+     LUT4:I1->O            5   0.704   0.712  b1/Madd__add0037_cy<1>11 (b1/Madd__add0037_cy<1>)
+     LUT4:I1->O            1   0.704   0.455  b1/HUNDREDS_mux001321 (b1/N261)
+     LUT4:I2->O            3   0.704   0.566  b1/HUNDREDS_mux00131 (b1/Madd__add0042_lut<2>)
+     LUT3:I2->O            3   0.704   0.566  b1/TH_0_mux000511 (b1/N128)
+     LUT4:I2->O            4   0.704   0.762  b1/TH_0_mux00052 (b1/Madd__add0047_cy<0>)
+     LUT4:I0->O            4   0.704   0.622  b1/TENTH_0_mux00031 (b1/Madd__add0052_cy<0>)
+     LUT4:I2->O            2   0.704   0.451  b1/Madd__add0052_cy<1>11 (b1/Madd__add0052_cy<1>)
+     LUT4:I3->O           11   0.704   1.108  b1/HUNTH_0_mux0001 (b1/HUNTH_0_mux0001)
+     LUT3:I0->O            4   0.704   0.666  b1/Madd__add0058_cy<1>11 (b1/Madd__add0058_cy<1>)
+     LUT3:I1->O            3   0.704   0.706  b1/HUNTH_0_cmp_ge00021 (b1/HUNTH_0_cmp_ge0002)
+     LUT4:I0->O            4   0.704   0.622  b1/TENTH_mux00071 (b1/Madd__add0065_lut<2>)
+     LUT3:I2->O            3   0.704   0.610  b1/HUNTH_0_cmp_ge00031 (b1/HUNTH_0_cmp_ge0003)
+     LUT3:I1->O            3   0.704   0.706  b1/Madd__add0072_cy<1>11 (b1/Madd__add0072_cy<1>)
+     LUT3:I0->O            4   0.704   0.762  b1/HUNTH_0_mux00041 (b1/Madd__add0078_cy<0>)
+     LUT4:I0->O            7   0.704   0.743  b1/MIL_0_mux000211 (b1/N154)
+     LUT4:I2->O            3   0.704   0.706  b1/HUNTH_mux001011 (b1/N57)
+     LUT3:I0->O            5   0.704   0.808  b1/MIL_0_mux000311 (b1/N160)
+     LUT4:I0->O            2   0.704   0.622  b1/Madd__add0093_cy<1>11 (b1/Madd__add0093_cy<1>)
+     LUT4:I0->O            1   0.704   0.000  b1/TENMIL_0_mux000136_G (N137)
+     MUXF5:I1->O           6   0.321   0.844  b1/TENMIL_0_mux000136 (b1/TENMIL_0_mux0001)
+     LUT3:I0->O            3   0.704   0.706  b1/MIL_mux000711 (b1/N68)
+     LUT4:I0->O            4   0.704   0.762  b1/TENMIL_0_mux000211 (b1/N172)
+     LUT4:I0->O            3   0.704   0.706  b1/MIL_mux001011 (b1/N77)
+     LUT4:I0->O            5   0.704   0.808  b1/TENMIL_0_mux000311 (b1/N179)
+     LUT4:I0->O            3   0.704   0.706  b1/MIL_mux001311 (b1/N85)
+     LUT4:I0->O            2   0.704   0.526  b1/TENMIL_0_mux000411 (b1/N186)
+     LUT2:I1->O            3   0.704   0.535  b1/TENMIL_0_mux00042 (b1/Madd__add0127_Madd_cy<0>)
+     LUT4:I3->O            3   0.704   0.610  b1/Madd__add0127_Madd_cy<1>11 (b1/Madd__add0127_Madd_cy<1>)
+     LUT4:I1->O            1   0.704   0.424  b1/TENMIL_mux000721 (b1/N1011)
+     LUT4:I3->O            1   0.704   0.455  b1/TENMIL_mux00071 (dispdata<7><2>)
+     LUT3:I2->O            1   0.704   0.000  Mmux__varindex0000_42 (Mmux__varindex0000_42)
+     MUXF5:I1->O           1   0.321   0.000  Mmux__varindex0000_3_f5_1 (Mmux__varindex0000_3_f52)
+     MUXF6:I1->O           7   0.521   0.883  Mmux__varindex0000_2_f6_1 (_varindex0000<2>)
+     LUT4:I0->O            1   0.704   0.420  s1/Mrom_bcd_rom000011 (segment_6_OBUF)
+     OBUF:I->O                 3.272          segment_6_OBUF (segment<6>)
+    ----------------------------------------
+    Total                     70.818ns (38.373ns logic, 32.445ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 24.76 secs
+ 
+--> 
+
+Total memory usage is 289916 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,4 @@
+verilog work "counter.v"
+verilog work "bin_to_bcd.v"
+verilog work "bcd_to_seg.v"
+verilog work "freq_meter.v"
