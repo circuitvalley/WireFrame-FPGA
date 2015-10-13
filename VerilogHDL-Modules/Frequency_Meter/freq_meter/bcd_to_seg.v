@@ -1,14 +1,14 @@
 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company:    www.CircuitValley.com
+// Engineer:   Gaurav Singh
 // 
 // Create Date:    22:01:35 10/12/2015 
-// Design Name: 
+// Design Name:    freq_meter
 // Module Name:    bcd_to_seg 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Project Name:   freq_meter
+// Target Devices:  XC3S250E (WireFrame Board)
+// Tool versions:   Xilinx ISE 14.2
 // Description: 
 //
 // Dependencies: 
